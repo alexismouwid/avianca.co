@@ -35,7 +35,7 @@
 
 .li1{
 
-  height: 44px;
+  height: 40.5px;
   width: 100px;
 font-size: 14px;
 transition: 0.20s;
@@ -52,7 +52,7 @@ border: none;
 }
 
 .li2{
- height: 44px;
+ height: 40.5px;
   width: 150px;
 font-size: 14px;
 transition: 0.20s;
@@ -69,7 +69,7 @@ border: none;
 }
 
 .li3{
- height: 44px;
+ height: 40.5px;
   width: 150px;
 font-size: 14px;
 transition: 0.20s;
@@ -87,7 +87,7 @@ font-weight: bold;
 }
 
 .li4{
- height: 44px;
+ height: 40.5px;
   width: 150px;
 font-size: 14px;
 transition: 0.20s;
@@ -104,7 +104,7 @@ font-weight: bold;
 
 
 .li5{
- height: 44px;
+ height: 40.5px;
   width: 80px;
 font-size: 14px;
 transition: 0.20s;
