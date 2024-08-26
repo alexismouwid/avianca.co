@@ -1,4 +1,5 @@
 body {
+    width: 100%;
     font-family: Arial, sans-serif;
     align-items: left;
     margin: 0;
@@ -8,6 +9,7 @@ body {
 }
 
 header {
+    width: 100%;
     position: relative;
     padding: 10px;
     background-color: #000000;

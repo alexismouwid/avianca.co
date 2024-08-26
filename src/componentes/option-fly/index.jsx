@@ -138,7 +138,9 @@ class SearchForm extends Component {
   render() {
     return (
       <div className="cajon-azul">
-        <div className="flight-options">
+        <div className='container'>
+
+ <div className="flight-options">
           <button
             type="button"
             className={`flight-button ${this.state.isOneWay === 'roundTrip' ? 'active' : ''}`}
@@ -238,7 +240,13 @@ class SearchForm extends Component {
             </button>
           </div>
         </div>
-      </div>
+
+
+
+
+
+        </div>
+             </div>
     );
   }
 }

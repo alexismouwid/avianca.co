@@ -1,26 +1,69 @@
-.imagen1-contenido{
-  background-image: url('./if.png');
-  background-size: contain; /* O 'contain', dependiendo de cómo quieras que se ajuste la imagen */
+.contenido {
+  margin: 20px 40px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.espacio{
+
+  font-size: 120px;
+ visibility: hidden;
+}
+
+.imagen1-contenido, .imagen2-contenido {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-    justify-content: center; /* Centra verticalmente */
-    /* Tamaño del div para visualizar mejor */
-    width: 100%;
-    height: 60vh; /* Hace que el div ocupe toda la altura de la ventana */
-    color: white; /* Para que el texto sea visible sobre un fondo oscuro */
+  justify-content: center;
+  align-items: center;
+  width: 70%; /* Valor por defecto para pantallas grandes */
+  height: 250px;
+  color: white;
 }
-.button-compraya{
-  background-color: white;
-  color: black;
-  position: relative;
-  left: 41.5%;
-  top: 68%;
-  font-size: 13px;
+.imagen1-contenido{
+  background-image: url('./mujer-viajera.png')
+
+}
+.imagen2-contenido {
+  background-color: red;
+  width: 30%; /* Valor por defecto para pantallas grandes */
+}
+
+.titulo1, .titulo2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.button-compraya {
+  margin: 10px 0;
+  color: #000;
+  background-color: red;
+  border: 1px solid rgba(0,0,0,0.9);
+   font-size: 20px;
   border-radius: 20px;
 }
-.button-compraya:hover{
+
+.button-compraya:hover {
   background-color: gray;
   color: white;
-  size: bold;
+ size: bold;
+ font-size: 20px;
+}
+
+@media (max-width: 920px) {
+  .contenido {
+    flex-direction: column; /* Cambia la orientación a vertical */
+    margin: 80px 0;
+  }
+
+  .imagen1-contenido, .imagen2-contenido {
+    background-size: cover;
+    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
 }
 

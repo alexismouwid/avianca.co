@@ -1,18 +1,27 @@
 .cajon-azul {
   background: linear-gradient(to bottom, #80d8ff, #ffffff);
-  height: 20vh;
-  margin: 0;
-  padding: 0;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  padding: 40px;
+
+}
+.container{
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.3); /* Blanco con 70% de opacidad */
+  border-radius: 20px;
 }
 
 .flight-options {
+
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
   position: relative;
   right: 200px;
   display: inline-block;
   margin: 10px;
   flex-direction: row;
-  background-color: #fff;
-  border-radius: 50%;
+  border-radius: 25px;
   justify-content: start;
   color: #000;
 }
@@ -31,18 +40,20 @@
 .flight-button:hover {
   background-color: #ffffff;
   color: #000000; /* Color de fondo al pasar el cursor sobre el botón */
+  border: none;
 }
 
 .flight-button.active {
   color: #000000;
   font-weight: bold; /* Texto en negrita cuando el botón está activo */
+  border: none;
 }
 
 .indicator {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid black; /* Borde negro por defecto */
+  border: 1px solid rgba(0,0,0,0.5); /* Borde negro por defecto */
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
@@ -55,6 +66,13 @@
 }
 
 /* Origen y destino */
+
+.container-search{
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
+border: 20px;
+justify-content: space-between;
+
+}
 .search-fields {
   display: inline-block;
   flex-direction: row;
