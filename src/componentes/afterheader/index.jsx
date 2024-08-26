@@ -36,12 +36,12 @@ return(<>
 
 
         <button className="button1">  <img src='global.png' alt='global'
-                   width={20} className="global-logo" ></img>Viancachat</button>
+                   width={12} className="global-logo" ></img>Viancachat</button>
 
         <button className="button2"> Español </button>
                 <button id="dropdownButton" onClick={this.toggleMenu}>
                     <img src='colombia.png' alt='bandera-colombia'
-                   width={20} className="colombia-logo" ></img>
+                   width={12} className="colombia-logo" ></img>
         Colombia</button>
                 {this.state.showMenu && (
                     <div id="dropdownMenu" className="dropdown-content" ref={(element) => { this.dropdownMenu = element; }}>

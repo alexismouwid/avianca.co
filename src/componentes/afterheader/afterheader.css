@@ -1,25 +1,25 @@
 body {
     width: 100%;
     font-family: Arial, sans-serif;
-    align-items: left;
+    align-items: center;
     margin: 0;
     padding 0;
     display: flex;
     justify-content: flex-end;
+    font-size: 10px;
 }
 
 header {
     width: 100%;
     position: relative;
-    padding: 10px;
-    background-color: #000000;
-    border-bottom: 1px solid #ddd;
+    background-color: rgba(0,0,0,0.9);
     display: flex;
     justify-content: flex-end;
 }
 
 #dropdownButton {
-    background-color: #000;
+
+    background-color: transparent;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -27,30 +27,31 @@ header {
 }
 
 #dropdownButton:hover {
-    background-color: #000000;
+    transition: 0.2ms;
     color: green;
 }
 .button1, .button2 {
-    background-color: #000;
+    
+    background-color: transparent;
     transition: 0.2ms;
 }
 .button1:hover{
-    background-color: #000000;
+
+    background-color: transparent;
     color: green;
     border:none;
 }
 .button2:hover{
+
+    background-color: transparent;
     color: green;
-    background-color: #000000;
     border: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -62,7 +63,6 @@ header {
 }
 
 .dropdown-content .country:hover {
-    background-color: #f1f1f1;
 }
 .colombia-logo{
     margin-right: 10px;
