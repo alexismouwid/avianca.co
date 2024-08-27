@@ -4,9 +4,9 @@
   background-position: center;
   height: 30vh;
   padding: 40px;
-
 }
-.container{
+
+.container {
   margin-bottom: 20px;
   padding: 20px 10px;
   background: rgba(255, 255, 255, 0.3); /* Blanco con 70% de opacidad */
@@ -14,11 +14,8 @@
 }
 
 .flight-options {
-
-  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
-  position: relative;
-  right: 200px;
   display: inline-block;
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
   margin: 10px;
   flex-direction: row;
   border-radius: 25px;
@@ -67,26 +64,30 @@
 
 /* Origen y destino */
 
-.container-search{
+.container-search {
+  display: flex;
+flex-wrap: row wrap;
+  flex-direction: row;
   background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
-border: 20px;
-justify-content: space-between;
-
+  border: 20px;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre los inputs */
 }
+
 .search-fields {
   display: inline-block;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10px; /* Espacio entre los inputs */
-  flex-direction: center;
+  
+
 }
 
 .field {
   display: inline-block;
   position: relative;
   flex: 1;
-  
   width: 30; /* Hace que cada input ocupe la mitad del espacio */
+ 
 }
 
 .icon-img {
@@ -96,6 +97,7 @@ justify-content: space-between;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
+  pointer-events: none;
 }
 
 input {
@@ -106,11 +108,12 @@ input {
   background-color: #fff;
   color: black;
   width: 160px;
+
 }
 
 input::placeholder {
   position: relative;
-  bottom : 7px;
+  bottom: 7px;
   font-size: 10px;
 }
 
@@ -163,32 +166,160 @@ input:hover {
   background-color: #fff; /* Fondo blanco para el label */
   padding: 0 5px; /* Espaciado alrededor del texto */
 }
+
 /* Ajusta el campo de fecha para incluir el ícono dentro del input */
-.date-picker,
-.date-picker1 {
-  position: relative; /* Necesario para posicionar el ícono dentro del input */
-  padding: 10px 10px 10px 40px; /* Asegura que el ícono esté dentro del campo de entrada */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: #fff;
-  color: black;
-  width: 160px; /* Ajusta el ancho si es necesario */
+.date-picker-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+.date-picker-container2 {
+  position: relative;
+  display: inline-block;
+
+  margin-right: 20px;
 }
 
-/* Asegura que el ícono se posicione correctamente dentro del campo */
-.date-picker::before,
-.date-picker1::before {
-  content: url('./calendario.png'); /* Ruta de tu ícono */
+.calendar-icon {
   position: absolute;
-  left: 10px; /* Ajusta según sea necesario */
   top: 50%;
+  left: 10px;
   transform: translateY(-50%);
-  width: 20px; /* Ajusta el tamaño del ícono si es necesario */
+  pointer-events: none;
+  width: 20px; /* Ajusta el tamaño del icono según sea necesario */
   height: 20px;
 }
 
+.custom-datepicker {
+  padding-left: 40px; /* Espacio suficiente para el icono */
+  height: 35px;
+  font-size: 16px;
+}
 
+/* Botón de pasajeros */
+
+.passenger-counter-container {
+  position: relative; /* Contenedor relativo para el menú de pasajeros */
+}
+
+#passengerCounter {
+ 
+  position: absolute; /* Menú de pasajeros se posiciona de manera absoluta */
+  top: 100%; /* Se coloca justo debajo del botón */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ajusta el ancho según sea necesario */
+}
+
+.button-passengers {
+  font-size:15px;
+  display: flex;
+  justify-content: 
+  transition: 0.10ms;
+  color: rgba(0,0,0,0.8);
+  width: 40px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.7);
+  transition: 0.20ms;
+}
+
+.button-passengers:hover {
+  color: rgba(0,0,0,0.8);
+  width: 40px; 
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid green;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.quienes-viajan {
+  font-size: 12px;
+  color: black;
+}
+
+span {
+  font-size: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+#passengerCounter {
+  width: 110px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+}
+
+.counter-group > div {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.buttonsu {
+  font-size: 10px;
+  width: 10px;
+  padding: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 5px;
+  color: black;
+  background-color: #fff;
+  font-weight: bold;
+  transition: 0.10ms;
+}
+
+.buttonmen {
+  width: 10px;
+  font-size: 10px;
+  padding: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 5px;
+  color: black;
+  background-color: #fff;
+  font-weight: bold;
+  transition: 0.10ms;
+}
+
+.buttonsu:hover {
+  width: 10px;
+  font-size: 10px;
+  background-color: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+.buttonmen:hover {
+  width: 10px;
+  font-size: 10px;
+  background-color: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+.button-confirmar {
+  font-size: 13px;
+  border: none;
+  background-color: black;
+  border-radius: 25px;
+  margin: 10px auto;
+  font-weight: bold;
+  transition: 0.10ms;
+  margin-left: 40px;
+}
+
+.button-confirmar:hover {
+  font-size: 13px;
+  border: none;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+}
 
 /* Opcional: Puedes añadir estilos para el botón de búsqueda */
 .search-button {
@@ -202,73 +333,12 @@ input:hover {
   cursor: pointer;
   margin-top: 10px;
   size: bold;
-  transition: 0.2s
+  transition: 0.2s;
 }
 
 .search-button:hover {
   background-color: #696969;
   color: #fff;
   size: bold;
-}
-
-/* Estilos para el componente PassengerCounter */
-.passenger-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 40px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-}
-
-.passenger-button img {
-  margin-right: 5px;
-}
-
-.passenger-button span {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.passenger-menu {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 1000;
-  right: 0;
-}
-
-.passenger-type {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.passenger-type span {
-  font-size: 10px;
-  color:black;
-  padding: 10px;
-}
-
-.passenger-type button {
-  color: black;
-  width: 3px;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #000;
-}
-.passenger-type button:hover{
-  width: 3px;
-  color: green;
-  border: 1px solid green;
 }
 
