@@ -116,6 +116,12 @@ class SearchForm extends Component {
 
   handleReturnDateChange = (date) => {
     this.setState({ returnDate: date });
+
+  handleConfirm = () => {
+    this.setState({ showCounter: false });
+  };
+    
+
   };
 
   render() {
@@ -217,12 +223,12 @@ class SearchForm extends Component {
                     dateFormat="dd/MM/yyyy"
                     className="date-picker"
                     placeholderText="Vuelta"
-                  />
-                </div>
-              )}
+                    />
+                  </div>
+                )}
 
-              <div className='field passenger-counter-container'>
-                <button className='button-passengers' onClick={this.toggleCounter}>
+                <div className='field passenger-counter-container'>
+                  <button className='button-passengers' onClick={this.toggleCounter}>
                   <img src='./inicio.png' alt="pasajero-image" width={15} />
                   {`(${totalPassengers})`}
                 </button>
@@ -256,11 +262,15 @@ class SearchForm extends Component {
                         <button className="buttonsu" onClick={() => this.increment('infants')}>+</button>
                       </div>
                     </div>
+                    <div> 
+                      <button className='button-confirmar' onClick={this.handleConfirm}> Confirmar </button> 
+                    </div>
                                      </div>
                 )}
               </div>
  <div className="field">
-                      <button className='button-confirmar'>Confirmar</button>
+
+   <button className='search-button'>Buscar</button>
                     </div>
 
             </div>
