@@ -24,7 +24,7 @@ Actualmente, el proyecto está en fase de desarrollo. Se han implementado las pr
 - **JavaScript (ES6+)** 🚀 - Para la interactividad y lógica de la aplicación.  
 
 ## 📷 Capturas de Pantalla  
-_Aquí puedes agregar imágenes del proyecto en acción._  
+  
 
 ## 📂 Instalación y Uso  
  Clona este repositorio:  
@@ -34,4 +34,5 @@ _Aquí puedes agregar imágenes del proyecto en acción._
    - npm install
    - npm run dev
 
+## Desploy 🚀
 [Desploy] (https://avianca-co.vercel.app/)
