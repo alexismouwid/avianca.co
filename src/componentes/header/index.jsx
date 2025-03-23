@@ -13,16 +13,14 @@ class Header extends Component {
 
   <li className="li1">Reserva</li>
 <li className="li2">Ofertas y destinos</li>
-  <li className="li3">Tu reserva Check in</li>
+  <li className="li3">Tu reserva <span className="check">Check-in</span></li>
           <li className="li4">
             Informacion y ayuda
           </li>
           <li className="li5" >
             lifemiles
           </li >
-          <li className="target">
-          <button className="button-target"> Tarjeta avianca UATR</button>
-          </li>
+          
                       </ul>
 
 

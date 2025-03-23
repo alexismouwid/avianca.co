@@ -216,7 +216,7 @@ class SearchForm extends Component {
 
               {this.state.showReturnDate && (
                 <div className="date-picker-container2">
-                  <img src="./calendario.png" alt="calendario icon" className="calendar-icon" width={40} />
+                  <img src="./calendario.png" alt="calendario icon" className="calendar-icon2" width={40} />
                   <DatePicker
                     selected={this.state.returnDate}
                     onChange={this.handleReturnDateChange}

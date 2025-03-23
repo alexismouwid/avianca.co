@@ -12,7 +12,6 @@ function App() {
       <Afterheader />
       <Header />
       <SearchForm />
-      
       <Contenido />
               </>
   )
