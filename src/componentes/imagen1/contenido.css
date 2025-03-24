@@ -1,4 +1,6 @@
 .contenido {
+  position: relative;
+  bottom: 50px;
   margin: 0px 40px;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -11,7 +13,9 @@
  visibility: hidden;
 }
 
-.imagen1-contenido, .imagen2-contenido {
+.imagen1-contenido {
+
+  background-image: url('./mujer-viajera.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,11 +25,9 @@
   height: 250px;
   color: white;
 }
-.imagen1-contenido{
-  background-image: url('./mujer-viajera.png')
 
-}
 .imagen2-contenido {
+
   background-color: red;
   width: 30%; /* Valor por defecto para pantallas grandes */
 }
@@ -52,18 +54,5 @@ p {
   color: white;
  size: bold;
  font-size: 20px;
-}
-
-@media (max-width: 920px) {
-  .contenido {
-    flex-direction: column; /* Cambia la orientación a vertical */
-    margin: 80px 0;
-  }
-
-  .imagen1-contenido, .imagen2-contenido {
-    background-size: cover;
-    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
-    height: auto; /* Ajusta la altura automáticamente */
-  }
 }
 
