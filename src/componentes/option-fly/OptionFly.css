@@ -1,4 +1,5 @@
 .cajon-azul {
+
   background: linear-gradient(to bottom, #80d8ff, #ffffff);
   background-size: cover;
   background-position: center;
@@ -7,21 +8,19 @@
 }
 
 .container {
+  margin-bottom: 20px;
+  padding: 20px 10px;
   background: rgba(255, 255, 255, 0.3); /* Blanco con 70% de opacidad */
-  border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .flight-options {
-  position: relative;
-  right: 460px;
   display: inline-block;
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
   margin: 10px;
-  background: #fff; /* Blanco con 70% de opacidad */
   flex-direction: row;
   border-radius: 25px;
-  align-items: left;
-  justify-content: right;
+  justify-content: start;
   color: #000;
 }
 
@@ -32,8 +31,6 @@
   padding: 10px 20px;
   font-size: 12px;
   cursor: pointer;
-  border-radius: 25px;
-  border: none;
   transition: 0.3s; /* Transiciones para suavizar el cambio de estilos */
   align-items: center;
 }
@@ -58,45 +55,37 @@
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+  transition: 0.3s; /* Transiciones para suavizar el cambio de estilos */
 }
-.indicator:hover{
-  border: 1.5px solid darkgreen;
-}
+
 .indicator.active {
-  box-shadow: inset 0 0 0 5px green; /* Fondo verde cuando el indicador está activo */
+  background-color: #4CAF50; /* Fondo verde cuando el indicador está activo */
+  border: none; /* Sin borde cuando el indicador está activo */
 }
 
 /* Origen y destino */
 
 .container-search {
   display: flex;
-  width: 100%;
+flex-wrap: row wrap;
   flex-direction: row;
   background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
-  border-radius: 25px;
   border: 20px;
   justify-content: space-between;
-  text-align: center;
+  gap: 20px; /* Espacio entre los inputs */
 }
 
 .search-fields {
   display: inline-block;
   flex-direction: row;
   justify-content: space-between;
-  height: 80px;
-  background-color : #fff;
-  width: 100%;
-  border-radius: 25px;
   
 
 }
 
-
 .field {
   display: inline-block;
   position: relative;
-  right: 100px;
-  top: 10px;
   flex: 1;
   width: 30; /* Hace que cada input ocupe la mitad del espacio */
  
@@ -119,8 +108,7 @@ input {
   font-size: 16px;
   background-color: #fff;
   color: black;
-  width: 300px;
-  height: 35px;
+  width: 160px;
 
 }
 
@@ -187,15 +175,12 @@ input:hover {
 /* Ajusta el campo de fecha para incluir el ícono dentro del input */
 .date-picker-container {
   position: relative;
-  width: 50px;
   display: inline-block;
   margin-left: 20px;
 }
 
 .date-picker-container2 {
-  width: 50px;
   position: relative;
-  left: 30px;
   display: inline-block;
   margin-right: 20px;
 }
@@ -203,17 +188,7 @@ input:hover {
 .calendar-icon {
   position: absolute;
   top: 50%;
-  right: 130px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  width: 20px;
-  height: 20px;
-  z-index: 2; /* Asegura que el ícono esté en el frente */
-}
-.calendar-icon2 {
-  position: absolute;
-  top: 50%;
-  right: 80px;
+  left: 10px;
   transform: translateY(-50%);
   pointer-events: none;
   width: 20px;
@@ -221,29 +196,8 @@ input:hover {
   z-index: 2; /* Asegura que el ícono esté en el frente */
 }
 
-
-
-.date-picker1 {
-  position:relative;
-  top: 10px;
-  width: 80px;
-  right: 110px;
-  padding-left: 40px; /* Añadir espacio para el icono */
-  height: 35px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  color: black;
-  z-index: 1; /* Asegura que el input esté detrás del ícono */
-}
-
+.date-picker1,
 .date-picker {
-  position:relative;
-  top: 10px;
-  right: 59px;
-  width: 80px;
-  
   padding-left: 40px; /* Añadir espacio para el icono */
   height: 35px;
   font-size: 16px;
@@ -253,15 +207,14 @@ input:hover {
   color: black;
   z-index: 1; /* Asegura que el input esté detrás del ícono */
 }
+
 
 
 
 /* Botón de pasajeros */
 
 .passenger-counter-container {
-  
   position: relative; /* Contenedor relativo para el menú de pasajeros */
-  left: 50px;
 }
 
 #passengerCounter {
@@ -269,7 +222,6 @@ input:hover {
   position: absolute; /* Menú de pasajeros se posiciona de manera absoluta */
   top: 100%; /* Se coloca justo debajo del botón */
   left: 0;
-  padding: 10px 15px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 10px;
@@ -336,6 +288,7 @@ color:black;
   background-color: #fff;
   font-weight: bold;
   transition: 0.10ms;
+  align-items
 }
 
 .buttonmen {
@@ -369,7 +322,7 @@ color:black;
 }
 
 .button-confirmar {
-  font-size: 12px;
+  font-size: 13px;
   border: none;
   background-color: black;
   border-radius: 25px;
@@ -386,12 +339,10 @@ color:black;
 
 /* Opcional: Puedes añadir estilos para el botón de búsqueda */
 .search-button {
-  position: relative;
-  left: 150px;
-  padding: 10px 20px;
+  display: inline-block;
   background-color: #000000;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -402,8 +353,55 @@ color:black;
 }
 
 .search-button:hover {
+  font-size: 16px;
   background-color: #696969;
   color: #fff;
   size: bold;
 }
 
+@media (max-width: 768px) {
+  .cajon-azul {
+    height: 50vh;
+  }
+
+  .container {
+    position: relative;
+    right: 2rem;
+    width: 110%;
+    padding: 10px;
+  }
+  
+  .flight-options {
+    background-color: #fff;
+    font-size: 12px;
+  }
+  .flight-button {
+    border: none;
+    font-size: 12px;
+    border-radius: 15px;
+  }
+
+  .container-search{
+    flex-direction: row;
+  }
+
+  .search-fields {
+    display: flex;
+    flex-direction: row;
+  }
+  .field {
+    border-radius: 2px;
+    width: 100px;
+  }
+
+
+  .button-passengers {
+    font-size: 12px;
+  }
+  .button-confirmar {
+    font-size: 12px;
+  }
+  .search-button {
+    font-size: 12px;
+  }
+}

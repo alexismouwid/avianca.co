@@ -10,10 +10,9 @@ function App() {
   return (
     <>
       <Afterheader />
-      <Header />
-      <SearchForm />
-      <Contenido />
-              </>
+  <Header />
+      <SearchForm />    
+    </>  
   )
 }
 
