@@ -56,7 +56,7 @@
        cursor: pointer;
        color: black;
        position: relative;
-       left: 0.8rem;
+       left: 5rem;
        top: 0.9rem;
      }
 
@@ -183,7 +183,7 @@ bottom: 10px;
   background-color: transparent;
   color: #000;
   font-size: 11px;
-  width: 70%;
+  width: calc(90vw - 20%);
   border-radius: 18px;
   height: 28px;
   transition: 0.20s;
@@ -193,7 +193,7 @@ bottom: 10px;
 .footer-menu-mobile{
   
   position: relative;
-  top: 0rem;
+  top: 9rem;
   left: 0;
   background-color: rgba(0,0,0,0.9);
   width: 100%;
