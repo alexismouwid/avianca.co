@@ -34,7 +34,6 @@
 
   .header-menu-mobile{
     display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
@@ -44,7 +43,7 @@
     display: flex;
     position: relative;
     right: 6.7rem;
-    top: 0.8rem;
+    top: 1.4rem;
      }
      .button-close-menu{
        border: none;
@@ -52,12 +51,12 @@
        display: flex;
        justify-content: center;
        align-items: center;
-       font-size: 16px;
+       font-size: 20px;
        cursor: pointer;
        color: black;
        position: relative;
-       left: 5rem;
-       top: 0.9rem;
+       left: 1.2rem;
+       top: 1.4rem;
      }
 
 .nav-links-mobile {
@@ -86,7 +85,7 @@
 
 .li-mobile{
   position: relative;
-  top: 12px;
+  top: 30px;
   left: 15px;
   margin-top: 30px;
   height: 16px;
@@ -103,7 +102,7 @@
 
   .li-end{
     position: relative;
-     top: 12px;
+     top: 30px;
   left: 15px;
     display: flex;
     align-items: center;
@@ -176,7 +175,7 @@ bottom: 10px;
 .btn6{
   position: relative;
   right: 40px;
-  bottom: 15px;
+  bottom: 0px;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 12px;
@@ -193,10 +192,10 @@ bottom: 10px;
 .footer-menu-mobile{
   
   position: relative;
-  top: 9rem;
+  top: 1.1rem;
   left: 0;
   background-color: rgba(0,0,0,0.9);
-  width: 100%;
+  width: calc(100vw - 0%);
   height: 150px;
   display: flex;
   flex-direction: column;

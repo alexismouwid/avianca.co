@@ -51,7 +51,7 @@ const Header = () => {
             <div className="header-menu-mobile"> 
 
               <div className="logo-menu-mobile">
-              <img src="./nombre-logo.png" alt="Logo" width="100px"></img>
+              <img src="./nombre-logo.png" alt="Logo" width="105px"></img>
                </div>
           <button className="button-close-menu" onClick={toggleMenu}>
              x
@@ -73,7 +73,7 @@ const Header = () => {
               <button className="btn4">Información y ayuda</button>
             </li>
             <li className="li-end">
-              <button className="btn5">Lifemiles</button>
+              <button className="btn5">lifemiles</button>
             </li>
 <li className="li-life">
  {/*Btn-6*/}<button className="btn6">Cuenta lifemiles</button>
