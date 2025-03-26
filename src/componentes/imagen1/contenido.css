@@ -1,4 +1,7 @@
 .contenido {
+  
+  width: 100vw;
+  height: 300px;
   position: relative;
   bottom: 50px;
   margin: 0px 40px;
@@ -7,29 +10,23 @@
   border-radius: 20px;
   overflow: hidden;
 }
-.espacio{
 
-  font-size: 120px;
- visibility: hidden;
-}
 
 .imagen1-contenido {
 
-  background-image: url('./mujer-viajera.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   width: 70%; /* Valor por defecto para pantallas grandes */
-  height: 250px;
+  height: 300px;
   color: white;
 }
 
 .imagen2-contenido {
 
   background-color: red;
-  width: 30%; /* Valor por defecto para pantallas grandes */
+  width: 50%; /* Valor por defecto para pantallas grandes */
 }
 
 .titulo1, .titulo2 {
@@ -55,4 +52,40 @@ p {
  size: bold;
  font-size: 20px;
 }
+@media (max-width: 768px) {
+  .contenido {
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+  }
 
+  .imagen1-contenido {
+    width: 100vw;
+    height: 200px;
+  }
+.titulo1 {
+  font-size: 25px;
+}
+p{
+  font-size: 14px;
+}
+.titulo2{
+  font-size: 25px;
+}
+.button-compraya{
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  width: 200px;
+  height: 50px;
+}
+.button-compraya:hover{
+  width: 200px;
+  height: 50px;
+}
+
+  .imagen2-contenido {
+    width: 100vw;
+    padding: 20px;
+  }
+}
