@@ -384,4 +384,32 @@ color:black;
 }
 
 
+@media (max-width: 768px) {
+  .cajon-azul {
+    height: auto;
+  }
+  .container{
+    height: auto;
+  }
 
+  .search-fields{
+height: auto;
+  }
+ .date-picker-container2{
+    position: relative;
+    right: -10px;
+  }
+ .date-picker-container{
+    position: relative;
+    right: 10px;
+  }
+  .button-passengers {
+    font-size: 12px;
+      width: 85px;
+  }
+  .search-button{
+    position: relative;
+    left: -10px;
+    font-size: 16px;
+  }
+}
