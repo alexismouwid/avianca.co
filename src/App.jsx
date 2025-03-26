@@ -8,10 +8,19 @@ function App() {
   
 
   return (
-    <>
-      <Afterheader />
+    <> <div className='App'>
+<div className='content-1'> 
+<Afterheader />
   <Header />
-      <SearchForm />    
+      <SearchForm /> 
+      </div>
+
+
+
+
+
+      </div>
+               
     </>  
   )
 }
