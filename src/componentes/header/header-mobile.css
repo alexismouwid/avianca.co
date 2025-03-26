@@ -1,5 +1,256 @@
-@media (max-width: 768px) {
+
+ 
+
+
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+   
+
+  .navbar{
+    height: 45px;
+  }
+
+  .navbar-container{
+  }
+.nav-links-desktop {
+  display: none;
+}
+
+.menu-button {
+  display: flex;
+  position: relative;
+  left: 0.3rem;
+  top: 0px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+  color: black;
+  margin-left: 5px;
+}
+.logo-rtx{
+  display: block;
+  position: relative;
+  right: 10.2rem;
+  top: 2px;
+}
+
+
+
+
+  .header-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo-menu-mobile{
+    display: flex;
+    position: relative;
+    right: 6.7rem;
+    top: 1.4rem;
+     }
+     .button-close-menu{
+       border: none;
+       background-color: transparent;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 20px;
+       cursor: pointer;
+       color: black;
+       position: relative;
+       left: 1.2rem;
+       top: 1.4rem;
+     }
+
+.nav-links-mobile {
+  position: absolute;
+  top: -10px;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  padding:  0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-links-mobile.active {
+  position: fixed;
+  left: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.li-mobile{
+  position: relative;
+  top: 30px;
+  left: 15px;
+  margin-top: 30px;
+  height: 16px;
+  width: calc(100vw - 20%);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 11px;
+  transition: 0.20s;
+  padding: 0px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .li-end{
+    position: relative;
+     top: 30px;
+  left: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: left;
+    font-size: 11px;
+    transition: 0.20s;
+    padding: 0px 15px;
+    text-align: center;
+  }
+
+.btn1, .btn2 , .btn3 , .btn4, .btn5{
+  height: 20px;
+color: rgba(0,0,0,0.8);
+position: relative;
+right: 27px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px;
+margin-bottom: 40px;
+padding:0 15px;
+text-align: center;
+border: none;
   
+}
+
+
+.btn1:hover, .btn2:hover , .btn3:hover , .btn4:hover, .btn5:hover{
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn1:hover{
+  border-left: 5px solid green;
+}
+.btn2:hover{
+  border-left: 5px solid red;
+}
+.btn3:hover{
+  border-left: 5px solid blue;
+}
+.btn4:hover{
+  border-left: 5px solid yellow;
+}
+.btn5:hover{
+  border-left: 5px solid black;
+}
+
+.check{
+  background-color: #328dde;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+   font-size: 10px;
+position: relative;
+right: 39px;
+bottom: 10px;
+  margin-bottom: 25px;
+  height: 10px;
+  width: 44px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+
+
+.btn6{
+  position: relative;
+  right: 40px;
+  bottom: 0px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #000;
+  font-size: 11px;
+  width: calc(90vw - 20%);
+  border-radius: 18px;
+  height: 28px;
+  transition: 0.20s;
+  border: 2.1px solid #000;
+}
+
+.footer-menu-mobile{
+  
+  position: relative;
+  top: 1.1rem;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  width: calc(100vw - 0%);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  gap: 5px;
+}
+
+.btn1-footer, .btn2-footer, .btn-avianca-footer {
+
+  margin-top: 10px;
+  color: #fff;
+  position: relative;
+  top: 25px;
+  background-color: transparent;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 12px;
+  padding:0 15px;
+  text-align: center;
+  border: none;
+
+}
+
+
+
+.global-logo{
+
+  margin-right: 10px;
+}
+
+.colombia-logo{
+
+  margin-right: 10px;
+
+}
+
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+ 
 
   .navbar{
     height: 45px;
@@ -236,8 +487,507 @@ bottom: 10px;
 }
 
 
+}
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+ 
+
+  .navbar{
+    height: 70px;
+  }
+
+  .navbar-container{
+  }
+.nav-links-desktop {
+  display: none;
+}
+
+.menu-button {
+  display: flex;
+  position: relative;
+  left: 0.3rem;
+  top: 0px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  color: black;
+  margin-left: 5px;
+}
+
+.logo-rtx{
+  display: block;
+}
+.logo-img-rtx{
+  display: block;
+  width: 180px;
+  position: relative;
+  right: 7rem;
+  top: 2px;
+}
 
 
+  .header-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo-menu-mobile{
+    display: flex;
+    position: relative;
+    right: 3rem;
+    top: 2rem;
+     }
+
+     .logo-img-menu-mobile{
+       width: 200px;
+     }
+     .button-close-menu{
+       border: none;
+       background-color: transparent;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 30px;
+       cursor: pointer;
+       color: black;
+       position: relative;
+       left: 0.9rem;
+       top: 2rem;
+     }
+
+.nav-links-mobile {
+  position: absolute;
+  top: -10px;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  padding:  0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-links-mobile.active {
+  position: fixed;
+  left: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.li-mobile{
+  position: relative;
+  top: 60px;
+  left: 15px;
+  margin-top: 30px;
+  height: 40px;
+  width: calc(100vw - 20%);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 11px;
+  transition: 0.20s;
+  padding: 0px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .li-end{
+    position: relative;
+     top: 60px;
+  left: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    justify-content: left;
+    font-size: 11px;
+    transition: 0.20s;
+    padding: 0px 15px;
+    text-align: center;
+  }
+
+.btn1, .btn2 , .btn3 , .btn4, .btn5{
+  height: 40px;
+color: rgba(0,0,0,0.8);
+position: relative;
+right: 27px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+margin-bottom: 40px;
+padding:0 15px;
+text-align: center;
+border: none;
+  
+}
+
+
+.btn1:hover, .btn2:hover , .btn3:hover , .btn4:hover, .btn5:hover{
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn1:hover{
+  border-left: 5px solid green;
+}
+.btn2:hover{
+  border-left: 5px solid red;
+}
+.btn3:hover{
+  border-left: 5px solid blue;
+}
+.btn4:hover{
+  border-left: 5px solid yellow;
+}
+.btn5:hover{
+  border-left: 5px solid black;
+}
+
+.check{
+  background-color: #328dde;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+   font-size: 18px;
+position: relative;
+right: 39px;
+bottom: 10px;
+  margin-bottom: 25px;
+  height: 30px;
+  width: 80px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+
+
+.btn6{
+  position: relative;
+  right: 20px;
+  top: 80px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #000;
+  font-size: 20px;
+  width: calc(100vw - 20%);
+  border-radius: 18px;
+  height: 28px;
+  transition: 0.20s;
+  border: 2.1px solid #000;
+}
+
+.footer-menu-mobile{
+  
+  position: relative;
+  top: 11rem;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  width: calc(100vw - 0%);
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  gap: 10px;
+}
+
+.btn1-footer, .btn2-footer, .btn-avianca-footer {
+
+  margin-top: 10px;
+  color: #fff;
+  position: relative;
+  top: 35px;
+  background-color: transparent;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 25px;
+  padding:0 15px;
+  text-align: center;
+  border: none;
+
+}
+
+
+
+.global-logo{
+
+  margin-right: 10px;
+}
+
+.colombia-logo{
+
+  margin-right: 10px;
+
+}
+
+
+  
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) { 
+ .navbar{
+    height: 45px;
+  }
+
+  
+.nav-links-desktop {
+  display: none;
+}
+
+.menu-button {
+  display: flex;
+  position: relative;
+  left: 0.3rem;
+  top: 0px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+  color: black;
+  margin-left: 5px;
+}
+.logo-rtx{
+  display: block;
+  position: relative;
+  right: 8rem;
+  top: 2px;
+}
+.logo-img-rtx{
+  display: block;
+  width: 140px;
+  position: relative;
+  left: 1.6rem;
+  top: 1.5px;
+}
+
+
+  .header-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo-menu-mobile{
+    display: flex;
+    position: relative;
+    right: 4rem;
+    top: 2rem;
+     }
+  .logo-img-menu-mobile{
+       width: 150px;
+     }
+     .button-close-menu{
+       border: none;
+       background-color: transparent;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 25px;
+       cursor: pointer;
+       color: black;
+       position: relative;
+       left: 3rem;
+       top: 2rem;
+     }
+
+.nav-links-mobile {
+  position: absolute;
+  top: -10px;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  padding:  0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-links-mobile.active {
+  position: fixed;
+  left: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.li-mobile{
+  position: relative;
+  top: 50px;
+  left: 15px;
+  margin-top: 30px;
+  height: 20px;
+  width: calc(100vw - 20%);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  transition: 0.20s;
+  padding: 0px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .li-end{
+    position: relative;
+     top: 50px;
+  left: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: left;
+    font-size: 11px;
+    transition: 0.20s;
+    padding: 0px 15px;
+    text-align: center;
+  }
+
+.btn1, .btn2 , .btn3 , .btn4, .btn5{
+  height: 30px;
+color: rgba(0,0,0,0.8);
+position: relative;
+right: 27px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+margin-bottom: 30px;
+padding:0 15px;
+text-align: center;
+border: none;
+  
+}
+
+
+.btn1:hover, .btn2:hover , .btn3:hover , .btn4:hover, .btn5:hover{
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn1:hover{
+  border-left: 5px solid green;
+}
+.btn2:hover{
+  border-left: 5px solid red;
+}
+.btn3:hover{
+  border-left: 5px solid blue;
+}
+.btn4:hover{
+  border-left: 5px solid yellow;
+}
+.btn5:hover{
+  border-left: 5px solid black;
+}
+
+.check{
+  background-color: #328dde;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+   font-size: 14px;
+position: relative;
+right: 39px;
+bottom: 10px;
+  margin-bottom: 25px;
+  height: 13px;
+  width: 60px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+.btn6{
+  position: relative;
+  right: 0;
+  top: 60px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #000;
+  font-size: 18px;
+  width: calc(100vw - 10%);
+  border-radius: 18px;
+  height: 28px;
+  transition: 0.20s;
+  border: 2.1px solid #000;
+}
+
+.footer-menu-mobile{
+  
+  position: relative;
+  top: 7.4rem;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  width: calc(100vw - 0%);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  gap: 5px;
+}
+
+.btn1-footer, .btn2-footer, .btn-avianca-footer {
+
+  margin-top: 10px;
+  color: #fff;
+  position: relative;
+  top: 15px;
+  background-color: transparent;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 18px;
+  padding:0 15px;
+  text-align: center;
+  border: none;
+
+}
+
+
+
+.global-logo{
+  margin-right: 10px;
+}
+
+.colombia-logo{
+
+  margin-right: 10px;
+
+}
+
+
+     
+
+ 
 
 
 

@@ -41,7 +41,7 @@ const Header = () => {
           </button>
         
         )}
-        <span className="logo-rtx"> <img src="./nombre-logo.png" alt="Avianca Logo" width="105px"/></span>
+        <span className="logo-rtx"> <img  className="logo-img-rtx" src="./nombre-logo.png" alt="Avianca Logo" width="105px"/></span>
        
         {/* Renderizado condicional de los menús */}
         {isMobile ? (
@@ -51,7 +51,7 @@ const Header = () => {
             <div className="header-menu-mobile"> 
 
               <div className="logo-menu-mobile">
-              <img src="./nombre-logo.png" alt="Logo" width="105px"></img>
+              <img className="logo-img-menu-mobile" src="./nombre-logo.png" alt="Logo" width="150px"></img>
                </div>
           <button className="button-close-menu" onClick={toggleMenu}>
              x
