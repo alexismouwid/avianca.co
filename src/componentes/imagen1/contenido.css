@@ -29,7 +29,7 @@
 }
 
 .titulo1, .titulo2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 p {
@@ -50,6 +50,7 @@ p {
 
   }
 @media (max-width: 768px) {
+
   .contenido {
     width: 100vw;
     flex-direction: column;
@@ -60,19 +61,21 @@ p {
     width: 100vw;
     height: 200px;
   }
+
 .titulo1 {
-  font-size: 25px;
+  font-size: 20px;
+}
+.titulo2{
+  font-size: 22px;
 }
 p{
   font-size: 14px;
 }
-.titulo2{
-  font-size: 25px;
-}
+
 .button-compraya{
   border: none;
   position: relative;
-  left: 10rem;
+  left: 5rem;
   background-color: white;
   color: black;
   font-size: 14px;
