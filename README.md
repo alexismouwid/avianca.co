@@ -35,4 +35,4 @@ Actualmente, el proyecto está en fase de desarrollo. Se han implementado las pr
    - npm run dev
 
 ## Desploy 🚀
-[Desploy] (https://avianca-co.vercel.app/)
+[Desploy] (https://avianca-co-fn142.vercel.app/)
