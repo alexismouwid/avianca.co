@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './OptionFly.css';
 
 class SearchForm extends Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
       adults: 0,
@@ -12,7 +12,7 @@ class SearchForm extends Component {
       children: 0,
       infants: 0,
       showCounter: false,
-      isOneWay: null,
+      isOneWay: true,
       origen: '',
       destino: '',
       showOptionsOrigen: false,
@@ -33,6 +33,92 @@ class SearchForm extends Component {
       ],
     };
   }
+
+componentDidUpdate(prevProps, prevState) {
+    if (prevState.isOneWay !== this.state.isOneWay) {
+      console.log("Estado de ida y vuelta cambió a:", this.state.isOneWay);
+      this.setState({ showReturnDate: !this.state.isOneWay });
+    }
+  }
+
+handleSearch = async (e) => {
+  e.preventDefault(); 
+
+  const { 
+    origen, 
+    destino, 
+    departureDate, 
+    returnDate, 
+    isOneWay,
+    adults = 0,
+    youths = 0,
+    children = 0,
+    infants = 0
+  } = this.state;
+
+  if (!origen || !destino || !departureDate || (!isOneWay && !returnDate)) {
+    alert("Por favor completa todos los campos requeridos");
+    return;
+  }
+
+  if(origen === destino) {
+    alert("Porfavor escoja un origen y un destino diferentes");
+    return;
+  }
+
+  if (adults + youths + children + infants === 0) {
+  alert("Debe haber al menos un pasajero en la reserva.");
+  return;
+}
+
+
+if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Date(returnDate)) {
+
+    alert("La fecha de regreso debe ser posterior a la fecha de ida.");
+    return;
+  }
+
+  const reservaData = {
+    origen,
+    destino,
+    fechaIda: departureDate,
+    fechaRegreso: isOneWay ? null : returnDate,
+    cantidadPersonas: adults + youths + children + infants,
+    tipoVuelo: isOneWay ? 'ida' : 'ida y vuelta'
+  };
+
+  try {
+    const response = await fetch('http://localhost:5000/reservas', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(reservaData),
+    });
+
+    if (!response.ok) throw new Error(`Error al guardar la reserva (${response.status})`);
+
+    try {
+      const data = await response.json();
+      alert(`Reserva guardada con éxito! ID: ${data._id}`);
+      console.log("Respuesta del backend:", data);
+      
+      this.setState({
+        origen: '',
+        destino: '',
+        departureDate: null,
+        returnDate: null,
+      });
+    } catch (jsonError) {
+      console.error("Error al leer la respuesta JSON:", jsonError);
+      alert("Error al procesar la respuesta del servidor.");
+    }
+    
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Hubo un error al guardar la reserva. Por favor intenta nuevamente.");
+  }
+};
 
   getTotalPassengers = () => {
     const { adults, youths, children, infants } = this.state;
@@ -65,11 +151,8 @@ class SearchForm extends Component {
     }));
   };
 
-  handleButtonClick = (type) => {
-    this.setState({
-      isOneWay: type,
-      showReturnDate: type === 'roundTrip',
-    });
+  handleButtonClick = (tripType) => {
+    this.setState({ isOneWay: tripType });
   };
 
   handleOrigenFocus = () => {
@@ -116,13 +199,13 @@ class SearchForm extends Component {
 
   handleReturnDateChange = (date) => {
     this.setState({ returnDate: date });
-
+  };
   handleConfirm = () => {
     this.setState({ showCounter: false });
   };
     
 
-  };
+  
 
   render() {
     const { adults, youths, children, infants, showCounter } = this.state;
@@ -134,19 +217,19 @@ class SearchForm extends Component {
           <div className="flight-options">
             <button
               type="button"
-              className={`flight-button ${this.state.isOneWay === 'roundTrip' ? 'active' : ''}`}
-              onClick={() => this.handleButtonClick('roundTrip')}
+              className={`flight-button ${!this.state.isOneWay ? 'active' : ''}`}
+              onClick={() => this.handleButtonClick(false)}
             >
-              <span className={`indicator ${this.state.isOneWay === 'roundTrip' ? 'active' : ''}`}></span>
+              <span className={`indicator ${!this.state.isOneWay ? 'active' : ''}`}></span>
               Ida y vuelta
             </button>
 
             <button
               type="button"
-              className={`flight-button ${this.state.isOneWay === 'oneWay' ? 'active' : ''}`}
-              onClick={() => this.handleButtonClick('oneWay')}
+              className={`flight-button ${this.state.isOneWay ? 'active' : ''}`}
+              onClick={() => this.handleButtonClick(true)}
             >
-              <span className={`indicator ${this.state.isOneWay === 'oneWay' ? 'active' : ''}`}></span>
+              <span className={`indicator ${this.state.isOneWay ? 'active' : ''}`}></span>
               Solo ida
             </button>
           </div>
@@ -270,7 +353,8 @@ class SearchForm extends Component {
               </div>
  <div className="field">
 
-   <button className='search-button'>Buscar</button>
+   <button className='search-button'
+   onClick={this.handleSearch}>Buscar</button>
                     </div>
 
             </div>

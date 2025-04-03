@@ -1,0 +1,28 @@
+.contenido2{
+  height: 300px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imagen1-contenido2 {
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  color: white;
+}
+
+.imagen2-contenido2 {
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  color: white;
+}
+.imagen3-contenido2 {
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  color: white;
+}

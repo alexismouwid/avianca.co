@@ -19,7 +19,7 @@ class Contenido extends Component {
             <p>Reserva y vuela entre agosto y noviembre de 2024</p>
             <p>Por trayecto desde</p>
             <h1 className="titulo2">COP 124.300</h1>
-            <button className="button-compraya">COMPRA YA</button>
+            <button className="button-compraya">Compra ya</button>
           </div>
         </div>
       </>

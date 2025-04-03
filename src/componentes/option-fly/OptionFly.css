@@ -242,15 +242,17 @@ input:hover {
 
 #passengerCounter {
  
-  position: absolute; /* Menú de pasajeros se posiciona de manera absoluta */
-  top: 100%; /* Se coloca justo debajo del botón */
+  position: absolute; 
+  top: 100%; 
   left: 0;
   background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px 10px;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ajusta el ancho según sea necesario */
+ width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-top: 18px;
+
 }
 
 .button-passengers {
@@ -285,14 +287,6 @@ input:hover {
 span {
   font-size: 16px;
 color:black;
-}
-
-#passengerCounter {
-  width: 180px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  background-color: rgba(255,255,255,0.6);
-  margin-top: 20px;
 }
 
 .counter-group > div {
@@ -393,22 +387,39 @@ color:black;
   }
 
   .search-fields{
-height: auto;
+height: 260px;
   }
  .date-picker-container2{
+    
     position: relative;
-    right: -10px;
+    bottom: 12px;
+    right: -35px;
   }
  .date-picker-container{
     position: relative;
     right: 10px;
   }
   .button-passengers {
-    font-size: 12px;
-      width: 85px;
+    margin: 0;
+    position: relative;
+    border-radius: 2px;
+    right: -25px;
+    font-size: 15px;
+      width: 50px;
   }
+#passengerCounter {
+  position: absolute;
+  top: -180px;
+  left: -200px;
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff; }
+
   .search-button{
     position: relative;
+    top: 9px;
     left: -10px;
     font-size: 16px;
   }
