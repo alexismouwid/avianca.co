@@ -88,7 +88,7 @@ if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Da
   };
 
   try {
-    const response = await fetch('https://backend-avianca.vercel.app/reserva', {
+    const response = await fetch('https://backend-avianca.vercel.app/reservas', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
