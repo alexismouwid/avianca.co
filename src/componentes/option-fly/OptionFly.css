@@ -488,8 +488,8 @@ height: 260px;
   }
 #passengerCounter {
   position: absolute;
-  top: -210px;
-  left: -1px;
+  top: -160px;
+  left: 55px;
   width: 220px;
   height: auto;
   padding : 0;
