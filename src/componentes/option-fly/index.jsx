@@ -7,19 +7,19 @@ class SearchForm extends Component {
     constructor(props) {
     super(props);
     this.state = {
-      adults: 0,
+      adults: 1,
       youths: 0,
       children: 0,
       infants: 0,
       showCounter: false,
       isOneWay: true,
-      origen: '',
+      origen: 'Bogotá (BOG)',
       destino: '',
       showOptionsOrigen: false,
       showOptionsDestino: false,
       showReturnDate: false,
-      departureDate: null,
-      returnDate: null,
+      departureDate: '05/07/2025',
+      returnDate: '10/07/2025',
       destinations: [
         'Bogotá', 'Medellín', 'Cali', 'Barranquilla', 'Cartagena', 'Bucaramanga', 'Pereira',
         'Manizales', 'Santa Marta', 'Ibagué', 'Cúcuta', 'Pasto', 'Villavicencio', 'Armenia',
@@ -238,10 +238,10 @@ if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Da
             <div className="search-fields">
               <div className="field">
                 <img src="./origen.png" alt="plane icon" className="icon-img" width={40} />
+                <label className="label">Origen</label>
                 <input
                   type="text"
                   name="origen"
-                  placeholder="Origen"
                   value={this.state.origen}
                   onChange={this.handleOrigenChange}
                   onFocus={this.handleOrigenFocus}
@@ -263,6 +263,7 @@ if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Da
 
               <div className="field">
                 <img src="./destino.png" alt="plane icon" className="icon-img" width={40} />
+  {this.state.destino && <label className="label">Destino</label>}
                 <input
                   type="text"
                   name="destino"
@@ -288,32 +289,34 @@ if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Da
 
               <div className="date-picker-container">
                 <img src="./calendario.png" alt="calendario icon" className="calendar-icon" width={20} />
+
+                <label className="label">Ida</label>
                 <DatePicker
                   selected={this.state.departureDate}
                   onChange={this.handleDepartureDateChange}
                   dateFormat="dd/MM/yyyy"
                   className="date-picker1"
-                  placeholderText="Ida"
+                 
                 />
               </div>
 
               {this.state.showReturnDate && (
                 <div className="date-picker-container2">
                   <img src="./calendario.png" alt="calendario icon" className="calendar-icon2" width={40} />
+<label className="label">Vuelta</label>
                   <DatePicker
                     selected={this.state.returnDate}
                     onChange={this.handleReturnDateChange}
                     dateFormat="dd/MM/yyyy"
                     className="date-picker"
-                    placeholderText="Vuelta"
                     />
                   </div>
                 )}
 
                 <div className='field passenger-counter-container'>
                   <button className='button-passengers' onClick={this.toggleCounter}>
-                  <img src='./inicio.png' alt="pasajero-image" width={15} />
-                  {`(${totalPassengers})`}
+                  <img className='img-pasajero' src='./inicio.png' alt="pasajero-image" width={15} />
+                    <span className='total-pasajeros'> {`(${totalPassengers})`} </span>
                 </button>
 
                 {showCounter && (
@@ -321,29 +324,42 @@ if (!isOneWay && departureDate && returnDate && new Date(departureDate) > new Da
                     <h2 className='quienes-viajan'>¿Quiénes viajan?</h2>
                     <div className="counter-group">
                       <div>
-                        <span>Adultos: </span>
-                        <button className="buttonmen" onClick={() => this.decrement('adults')}>-</button>
+                        <span className='categorias'>Adultos </span>
+                        <div className='linea1'> 
+ <button className="buttonmen" onClick={() => this.decrement('adults')}>-</button>
                         <span>{adults}</span>
                         <button className="buttonsu" onClick={() => this.increment('adults')}>+</button>
-                      </div>
+
+                        </div>
+                                             </div>
                       <div>
-                        <span>Jóvenes: </span>
-                        <button className="buttonmen" onClick={() => this.decrement('youths')}>-</button>
+                        <span className='categorias'>Jóvenes </span>
+                        <div className='linea2'> 
+<button className="buttonmen" onClick={() => this.decrement('youths')}>-</button>
                         <span>{youths}</span>
                         <button className="buttonsu" onClick={() => this.increment('youths')}>+</button>
-                      </div>
+                        </div>
+                                              </div>
                       <div>
-                        <span>Niños: </span>
-                        <button className="buttonmen" onClick={() => this.decrement('children')}>-</button>
+                        <span className='categorias'>Niños </span>
+
+      <div className='linea3'> 
+<button className="buttonmen" onClick={() => this.decrement('children')}>-</button>
                         <span>{children}</span>
                         <button className="buttonsu" onClick={() => this.increment('children')}>+</button>
-                      </div>
+      </div>
+                                              </div>
                       <div>
-                        <span>Bebés: </span>
-                        <button className="buttonmen" onClick={() => this.decrement('infants')}>-</button>
+                        <span className='categorias'>Bebés </span>
+
+                        <div className='linea4'> 
+ <button className="buttonmen" onClick={() => this.decrement('infants')}>-</button>
                         <span>{infants}</span>
                         <button className="buttonsu" onClick={() => this.increment('infants')}>+</button>
-                      </div>
+
+
+                        </div>
+                                             </div>
                     </div>
                     <div> 
                       <button className='button-confirmar' onClick={this.handleConfirm}> Confirmar </button> 

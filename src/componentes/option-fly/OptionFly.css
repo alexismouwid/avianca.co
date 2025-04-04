@@ -112,14 +112,30 @@ flex-wrap: row wrap;
   pointer-events: none;
 }
 
+.label{
+  color: gray;
+  font-size: 10px;
+  position: absolute;
+  top: 43%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  z-index: 2; /* Asegura que el ícono esté en el frente */
+
+}
+
+
 
 input {
-  padding: 10px 10px 10px 40px; /* Añadir espacio para la imagen */
+  padding: 20px 20px 0px 40px; /* Añadir espacio para la imagen */
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  font-weight: bold;
   background-color: #fff;
   color: black;
+
   width: 160px;
   height: 30px;
 
@@ -128,7 +144,17 @@ input {
 input::placeholder {
   position: relative;
   bottom: 8px;
-  font-size: 10px;
+  font-size: 15px;
+}
+
+
+input:focus::placeholder {
+  color: transparent; /* Oculta el placeholder */
+}
+:input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid green;
 }
 
 input:hover {
@@ -243,32 +269,38 @@ input:hover {
 #passengerCounter {
  
   position: absolute; 
-  top: 100%; 
-  left: 0;
+  top: 120%; 
+  left: -100px;
   background-color: white;
   padding: 5px 10px;
   z-index: 1000;
- width: 180px;
+ width: 290px;
   border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 25px;
   margin-top: 18px;
 
 }
 
 .button-passengers {
   position: relative;
-  top: 16px;
+  top: 4px;
   cursor: pointer;
   font-size:20px;
   display: flex;
   justify-content: center;
   transition: 0.10ms;
   color: rgba(0,0,0,0.8);
-  width: 100px;
-  height: 45px;
+  width: 70px;
+  height: 50px;
   border: 1px solid #ccc;
   background-color: rgba(255,255,255,0.7);
   transition: 0.20ms;
+}
+
+.categorias{
+  font-size: 18px;
+  padding-right: 3rem;
+  padding-left: 18px;
 }
 
 .button-passengers:hover {
@@ -279,7 +311,29 @@ input:hover {
   background-color: rgba(255,255,255,0.7);
 }
 
+.img-pasajero{
+  width: 30px;
+  height: 40px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+}
+.total-pasajeros{
+  position: relative;
+  top: 13px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
 .quienes-viajan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.7);
   font-size: 16px;
   color: black;
 }
@@ -294,12 +348,32 @@ color:black;
   padding: 5px 10px;
   display: flex;
 }
-
+.linea1{
+position: relative;
+left: 15px;
+}
+.linea2{
+position: relative;
+left: 10px;
+}
+.linea3{
+position: relative;
+left: 32px;
+}
+.linea4{ 
+  position: relative;
+left: 27px;
+}
+span{
+  font-size: 22px;
+  color: black;
+}
 .buttonsu {
   font-size: 20px;
-  width: 20px;
+  width: 22px;
+  height: 25px;
   padding: 0;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 50%;
   margin: 0 15px;
   color: black;
@@ -310,10 +384,11 @@ color:black;
 }
 
 .buttonmen {
-  width: 20px;
+  width: 22px;
+  height: 25px;
   font-size: 20px;
   padding: 0;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 50%;
   margin: 0 15px;
   color: black;
@@ -324,7 +399,7 @@ color:black;
 }
 
 .buttonsu:hover {
-  width: 20px;
+  width: 22px;
   font-size: 20px;
   background-color: #fff;
   color: green;
@@ -332,7 +407,7 @@ color:black;
 }
 
 .buttonmen:hover {
-  width: 20px;
+  width: 22px;
   font-size: 20px;
   background-color: #fff;
   color: green;
@@ -340,7 +415,9 @@ color:black;
 }
 
 .button-confirmar {
-  font-size: 15px;
+  
+  font-size: 20px;
+  padding: 10px 15px;
   border: none;
   background-color: black;
   border-radius: 25px;
@@ -349,10 +426,8 @@ color:black;
 }
 
 .button-confirmar:hover {
-  font-size: 13px;
-  border: none;
   color: white;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.8);
 }
 
 /* Opcional: Puedes añadir estilos para el botón de búsqueda */
@@ -392,8 +467,8 @@ height: 260px;
  .date-picker-container2{
     
     position: relative;
-    bottom: 12px;
-    right: -35px;
+    bottom: 0px;
+    right: -10px;
   }
  .date-picker-container{
     position: relative;
@@ -401,26 +476,67 @@ height: 260px;
   }
   .button-passengers {
     margin: 0;
+    top: 0;
     position: relative;
-    border-radius: 2px;
-    right: -25px;
+    border-radius: 5px;
     font-size: 15px;
-      width: 50px;
+      width: 220px;
+  }
+  .pasajero-image{
+    
   }
 #passengerCounter {
   position: absolute;
-  top: -180px;
-  left: -200px;
-  width: 200px;
+  top: -210px;
+  left: -1px;
+  width: 220px;
   height: auto;
+  padding : 0;
+  margin: 0;
   border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: #fff; }
 
   .search-button{
     position: relative;
-    top: 9px;
+    top: 40px;
     left: -10px;
     font-size: 16px;
   }
-}
+  .quienes-viajan{
+    font-size: 14px;
+  }
+  .categorias{
+    padding-right: 0;
+    padding-left: 14px;
+    font-size: 14px;
+
+  }
+  span{
+    font-size: 15px;
+  }
+  .buttonsu{
+    font-size: 16px;
+  }
+  .buttonmen{
+    font-size: 16px;
+  }
+  .button-confirmar{
+    position: relative;
+    top: -5px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .linea1{
+    left: 39px;
+  }
+  .linea2{
+    left: 33px;
+  }
+  .linea3{
+    left: 50px;
+  }
+  .linea4{
+   left: 46px;
+  }
+  }
