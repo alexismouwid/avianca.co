@@ -6,7 +6,13 @@ html, body, #root, .App {
     padding: 0;
     background-color: rgba(0,0,0,0.6);
 }
-
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa toda la pantalla */
+  background-color: #ffffff;
+}
 #root {
   max-width: none;
   width: 100%;
