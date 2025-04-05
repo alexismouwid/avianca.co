@@ -415,7 +415,7 @@ span{
 }
 
 .button-confirmar {
-  
+  color : white;
   font-size: 20px;
   padding: 10px 15px;
   border: none;
@@ -462,7 +462,7 @@ span{
   }
 
   .search-fields{
-height: 260px;
+height: 290px;
   }
  .date-picker-container2{
     
@@ -501,7 +501,7 @@ height: 260px;
   .search-button{
     position: relative;
     top: 40px;
-    left: -10px;
+    left: -140px;
     font-size: 16px;
   }
   .quienes-viajan{
