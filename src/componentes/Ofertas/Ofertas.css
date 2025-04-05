@@ -1,0 +1,70 @@
+.ofertas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px;
+  width: 90%;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titulo-ofertas {
+  color: black;
+}
+
+.ofertas h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.ciudad {
+  color: #00a8e0;
+}
+
+.ofertas {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.flecha {
+  color: #00a8e0;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .ofertas {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .ofertas h2 {
+    font-size: 20px;
+  }
+
+  .flecha {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas h2 {
+    font-size: 18px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

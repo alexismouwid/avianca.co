@@ -3,6 +3,8 @@ import Header from './componentes/header'
 import SearchForm from './componentes/option-fly'
 import Contenido from './componentes/imagen1'
 import Contenido2 from './componentes/content2'
+import Ofertas from './componentes/Ofertas'
+import PreparateViajar from './componentes/PreparateViajar'
 import { useState , useEffect } from 'react'
 import './App.css'
 
@@ -29,7 +31,8 @@ function App() {
   <Header />
       <SearchForm /> 
       <Contenido />
-  <Contenido2 />
+  <Ofertas />
+  <PreparateViajar />
       </div>
 
 
