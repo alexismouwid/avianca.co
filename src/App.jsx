@@ -31,7 +31,8 @@ function App() {
   <Header />
       <SearchForm /> 
       <Contenido />
-  <Ofertas />
+  <Ofertas 
+  />
   <PreparateViajar />
       </div>
 

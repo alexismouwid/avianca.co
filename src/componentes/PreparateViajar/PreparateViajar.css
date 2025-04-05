@@ -36,6 +36,8 @@
 
 .tarjeta:hover {
   transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 .icono {
@@ -58,14 +60,48 @@
 }
 
 /* Responsive */
+
+ 
 @media (max-width: 768px) {
+  .tarjetas::-webkit-scrollbar {
+    height: 5px; /* altura de la barra horizontal */
+  }
+
+  .tarjetas::-webkit-scrollbar-track {
+    background: #eee; /* fondo de la pista */
+    border-radius: 4px;
+  }
+
+  .tarjetas::-webkit-scrollbar-thumb {
+    background-color: gray; /* color del scroll */
+    border-radius: 2px;
+    border: 2px solid #eee; /* espacio alrededor del scroll */
+  }
+}
   .tarjetas {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 20px;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    overflow-x: auto;
   }
 
   .tarjeta {
-    max-width: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 80%;
+    max-width: 80%;
+    height: auto;
   }
+   .icono {
+    width: 60px;
+    height: 60px;
+  }
+ 
 }
+
 

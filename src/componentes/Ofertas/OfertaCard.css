@@ -56,3 +56,33 @@
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .card {
+    max-width: 95%;
+    height: 240px;
+  }
+  .card .info{
+    padding: 10px;
+  
+    height: 40px;
+  }
+  .card .info h3 {
+    font-size: 20px;
+  }
+  .overlay{
+    background-color: rgba(0,0,0,0.5);
+  }
+.card .info p {
+  position: relative;
+  top: -10px;
+  left: 2px;
+  font-size: 10px;
+}
+.precio{
+  font-size: 20px;
+  position: relative;
+  top: -10px;
+}
+
+}
+

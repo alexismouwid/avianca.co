@@ -1,7 +1,7 @@
 import React from 'react';
 import './OfertaCard.css';
 
-const OfertaCard = ({ imgSrc, ciudad, precio }) => {
+const OfertaCard = ({  imgSrc, ciudad, precio }) => {
   return (
     <div className="card" style={{ backgroundImage: `url(${imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center,' }}>
 
