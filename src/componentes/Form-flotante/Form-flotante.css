@@ -1,0 +1,545 @@
+.cajon-azul {
+
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+  padding: 40px;
+  background-image: url('/banner.png');
+}
+
+.container {
+  width: 90%;
+  height: 19vh;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.3); /* Blanco con 70% de opacidad */
+  border-radius: 20px;
+}
+
+.flight-options {
+  position: relative;
+  left: -20rem;
+  background-color: #ffffff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
+  margin: 10px;
+  flex-direction: row;
+  border-radius: 25px;
+  justify-content: start;
+  color: #000;
+}
+
+.flight-button {
+  display: inline-block;
+  color: #000;
+  background-color: #ffffff; /* Color de fondo inicial del botón */
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s; /* Transiciones para suavizar el cambio de estilos */
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.flight-button:hover {
+  background-color: #ffffff;
+  color: #000000; /* Color de fondo al pasar el cursor sobre el botón */
+  border: none;
+}
+
+.flight-button.active {
+  color: #000000;
+  font-weight: bold; /* Texto en negrita cuando el botón está activo */
+  border: none;
+}
+
+.indicator {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0,0,0,0.5); /* Borde negro por defecto */
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.indicator.active {
+  border: 5px solid green;
+ box-sizing: border-box;
+}
+
+/* Origen y destino */
+
+.container-search {
+  display: flex;
+flex-wrap: row wrap;
+  flex-direction: row;
+  width: 100%;
+   border-radius: 25px;
+  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad *
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre los inputs */
+}
+
+.search-fields {
+ 
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 25px;
+  width: 100%;
+  height: 60px;
+  padding: 10px 15px;
+  
+
+}
+
+.field {
+  display: inline-block;
+  position: relative;
+  flex: 1;
+  width: 30; /* Hace que cada input ocupe la mitad del espacio */
+ 
+}
+
+.icon-img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.label{
+  color: gray;
+  font-size: 10px;
+  position: absolute;
+  top: 43%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  z-index: 2; /* Asegura que el ícono esté en el frente */
+
+}
+
+
+
+input {
+  padding: 20px 20px 0px 40px; /* Añadir espacio para la imagen */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  color: black;
+  width: 160px;
+  height: 30px;
+
+}
+
+input::placeholder {
+  position: relative;
+  bottom: 8px;
+  font-size: 15px;
+}
+
+
+input:focus::placeholder {
+  color: transparent; /* Oculta el placeholder */
+}
+:input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+input:hover {
+  outline: none;
+  border-bottom: 2px solid green;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  color: black;
+  list-style: none;
+  font-size: 15px;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegúrate de que los campos de fecha se muestren correctamente */
+.field input[type="date"] {
+  width: 100%; /* Asegura que el input ocupe todo el ancho disponible en .field */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+}
+
+.date-label {
+  position: absolute;
+  top: -10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+  font-size: 12px; /* Tamaño del texto pequeño */
+  color: #666; /* Color del texto */
+  background-color: #fff; /* Fondo blanco para el label */
+  padding: 0 5px; /* Espaciado alrededor del texto */
+}
+
+/* Ajusta el campo de fecha para incluir el ícono dentro del input */
+/* Ajusta el campo de fecha para incluir el ícono dentro del input */
+/* Ajusta el campo de fecha para incluir el ícono dentro del input */
+.date-picker-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.date-picker-container2 {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.calendar-icon {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  z-index: 2; /* Asegura que el ícono esté en el frente */
+}
+.calendar-icon2 {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  z-index: 2; /* Asegura que el ícono esté en el frente */
+}
+
+.date-picker1,
+.date-picker {
+  padding-left: 40px; /* Añadir espacio para el icono */
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black;
+  z-index: 1; /* Asegura que el input esté detrás del ícono */
+}
+
+
+
+
+/* Botón de pasajeros */
+
+.passenger-counter-container {
+  position: relative; /* Contenedor relativo para el menú de pasajeros */
+}
+
+#passengerCounter {
+ 
+  position: absolute; 
+  top: 120%; 
+  left: -100px;
+  background-color: white;
+  padding: 5px 10px;
+  z-index: 1000;
+ width: 290px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-top: 18px;
+
+}
+
+.button-passengers {
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+  font-size:20px;
+  display: flex;
+  justify-content: center;
+  transition: 0.10ms;
+  color: rgba(0,0,0,0.8);
+  width: 70px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background-color: rgba(255,255,255,0.7);
+  transition: 0.20ms;
+}
+
+.categorias{
+  font-size: 18px;
+  padding-right: 3rem;
+  padding-left: 18px;
+}
+
+.button-passengers:hover {
+ font-size:20px;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid #ccc;
+  border-bottom: 2px solid green;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.img-pasajero{
+  width: 30px;
+  height: 40px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+}
+.total-pasajeros{
+  position: relative;
+  top: 13px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.quienes-viajan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  color: black;
+}
+
+span {
+  font-size: 16px;
+color:black;
+}
+
+.counter-group > div {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  display: flex;
+}
+.linea1{
+position: relative;
+left: 15px;
+}
+.linea2{
+position: relative;
+left: 10px;
+}
+.linea3{
+position: relative;
+left: 32px;
+}
+.linea4{ 
+  position: relative;
+left: 27px;
+}
+span{
+  font-size: 22px;
+  color: black;
+}
+.buttonsu {
+  font-size: 20px;
+  width: 22px;
+  height: 25px;
+  padding: 0;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 0 15px;
+  color: black;
+  background-color: #fff;
+  font-weight: bold;
+  transition: 0.10ms;
+}
+
+.buttonmen {
+  width: 22px;
+  height: 25px;
+  font-size: 20px;
+  padding: 0;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 0 15px;
+  color: black;
+  background-color: #fff;
+  font-weight: bold;
+  transition: 0.10ms;
+  justify-content: left;
+}
+
+.buttonsu:hover {
+  width: 22px;
+  font-size: 20px;
+  background-color: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+.buttonmen:hover {
+  width: 22px;
+  font-size: 20px;
+  background-color: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+.button-confirmar {
+  color : white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: black;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.10ms;
+}
+
+.button-confirmar:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Opcional: Puedes añadir estilos para el botón de búsqueda */
+.search-button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+ 
+  size: bold;
+  transition: 0.2s;
+  margin-left: 40px;
+}
+
+.search-button:hover {
+  background-color: #696969;
+  color: #fff;
+  size: bold;
+}
+
+
+@media (max-width: 768px) {
+  .cajon-azul {
+    height: auto;
+  }
+  .container{
+    height: auto;
+  }
+
+  .search-fields{
+height: 290px;
+  }
+ .date-picker-container2{
+    
+    position: relative;
+    bottom: 0px;
+    right: -10px;
+  }
+ .date-picker-container{
+    position: relative;
+    right: 10px;
+  }
+  .button-passengers {
+    margin: 0;
+    top: 0;
+    left: 55px;
+    position: relative;
+    border-radius: 5px;
+    font-size: 15px;
+      width: 220px;
+  }
+  .pasajero-image{
+    
+  }
+#passengerCounter {
+  position: absolute;
+  top: -160px;
+  left: 55px;
+  width: 220px;
+  height: auto;
+  padding : 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; }
+
+  .search-button{
+    position: relative;
+    top: 40px;
+    left: -140px;
+    font-size: 16px;
+  }
+  .quienes-viajan{
+    font-size: 14px;
+  }
+  .categorias{
+    padding-right: 0;
+    padding-left: 14px;
+    font-size: 14px;
+
+  }
+  span{
+    font-size: 15px;
+  }
+  .buttonsu{
+    font-size: 16px;
+  }
+  .buttonmen{
+    font-size: 16px;
+  }
+  .button-confirmar{
+    position: relative;
+    top: -5px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .linea1{
+    left: 39px;
+  }
+  .linea2{
+    left: 33px;
+  }
+  .linea3{
+    left: 50px;
+  }
+  .linea4{
+   left: 46px;
+  }
+  }

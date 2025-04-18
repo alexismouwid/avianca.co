@@ -13,6 +13,11 @@ html, body, #root, .App {
   height: 100vh; /* ocupa toda la pantalla */
   background-color: #ffffff;
 }
+.loader-contianer img{
+  width: 100px;
+  height: 100px;
+}
+
 #root {
   max-width: none;
   width: 100%;
@@ -42,5 +47,38 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3 ease;
  
 }
+
+.search-form-float {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border: 2px solid #ccc;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: all 0.3 ease;
+}
+
+.close-btn {
+  margin-top: 10px;
+  position: relative;
+  bottom: 10rem;
+  left: 35rem;
+  color: black;
+  font-weight: bold; 
+  font-size: 16px;
+  background-color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 

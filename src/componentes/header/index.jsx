@@ -59,6 +59,7 @@ const Header = () => {
            </div>
 
 
+
             <li className="li-mobile">
               <button className="btn1">Reservar </button> 
             </li>

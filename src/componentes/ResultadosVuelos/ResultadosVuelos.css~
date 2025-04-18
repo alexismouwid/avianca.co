@@ -1,0 +1,202 @@
+/* ResultadosVuelos.css */
+
+.resultados-container {
+    width: 100%;
+    height: 100vh;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #fff;
+}
+
+.titulo-resultados {
+    width: 100%;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.seccion-vuelos {
+    margin-bottom: 3rem;
+}
+
+.subtitulo {
+    color: #0066cc;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.subtitulo-escala {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 500;
+}
+
+.lista-vuelos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.vuelo-card {
+    position: relative;
+    margin: 0 auto;
+    width: 85%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vuelo-card:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vuelo-hora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    padding-right: 1.5rem;
+}
+
+.hora {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.aeropuerto {
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    margin-top: 0.3rem;
+}
+
+.vuelo-info {
+    flex: 1;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tipo-vuelo {
+    font-size: 1rem;
+    color: #0066cc;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.duracion {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.vuelo-precio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 150px;
+}
+
+.desde {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 0.3rem;
+}
+
+.precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #009900;
+    margin-bottom: 0.8rem;
+}
+
+.btn-seleccionar {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.btn-seleccionar:hover {
+    background-color: #e65c00;
+}
+
+.sin-resultados {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vuelo-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .vuelo-hora {
+        flex-direction: row;
+        align-items: center;
+        border-right: none;
+        border-bottom: 1px dashed #ccc;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .hora {
+        margin-right: 1rem;
+    }
+
+    .vuelo-info {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+    .vuelo-precio {
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px dashed #ccc;
+    }
+
+    .btn-seleccionar {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-resultados {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+}
