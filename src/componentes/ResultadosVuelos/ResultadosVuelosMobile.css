@@ -4,7 +4,7 @@
     .vuelo-card {
         flex-direction: column;
         padding: 1rem;
-        width: 80%;
+        width: 70%;
         position: relative;
         right: -4rem;
         border-radius: 8px;
@@ -86,7 +86,7 @@
         padding-top: 1rem;
         border-top: 1px dashed #ccc;
         position: relative;
-        right: 0rem;
+        right: 1rem;
         z-index: 1;
         bottom: 18.5rem;
         border: none;
