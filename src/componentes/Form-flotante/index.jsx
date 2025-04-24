@@ -93,13 +93,16 @@ class SearchFloat extends Component {
         try {
             this.setState({ isLoading: true });
             
-            const response = await fetch('http://localhost:5000/vuelos/buscar-vuelos', {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(searchData),
-            });
+
+const response = await fetch('https://backend-avianca-co.vercel.app/vuelos/buscar-vuelos', {
+    method: 'POST',
+    headers: { 
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(searchData),
+});
+
+
 
             if (!response.ok) {
                 throw new Error(`Error en la búsqueda (${response.status})`);
