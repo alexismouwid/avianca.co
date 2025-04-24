@@ -125,4 +125,51 @@
   position: relative;
   right: 3.2rem;
 }
+.modify-search{
+}
+@media (max-width: 768px) {
+  .headertwo {
+    position: relative;
+    right: 2.4rem;
+    width: 100%;
+    margin: 0 auto;
+  
+  } 
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  right: -6.5rem;
+}
+.avianca-logo {
+  display: none;
+}
+.right-section {
+  display: none;
+}
+.cart {
+  display: none;
+}
+.modify-search{
+  position: relative;
+  left: 3rem;
+  top: -1rem;
+}
+.route-details span{
+  font-size: 14px;
+  color: black;
+  position: relative;
+  left: -2rem;
+}
+.cities{
+  position: relative;
+  top: 1rem;
+}
+.passengers{
+  position: relative;
+  right: 2rem;
+}
+}
+
 

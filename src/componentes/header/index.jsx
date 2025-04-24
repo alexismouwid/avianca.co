@@ -10,7 +10,7 @@ const Header = () => {
     const checkScreenSize = () => {
       const mobile = window.innerWidth <= 768;
       setIsMobile(mobile);
-      if (!mobile) setMenuOpen(false);
+      if (!mobile) ;
     };
 
     checkScreenSize();

@@ -217,7 +217,7 @@ const response = await fetch('https://backend-avianca-co.vercel.app/vuelos/busca
         return (
         
                 <div className='container'>
-                    <h2 style={{ textAlign: 'center', color: 'black' }}>Modificar búsqueda</h2>
+                    <h2  className="title-mod">Modificar búsqueda</h2>
                     <div className="flight-options">
                         <button
                             type="button"

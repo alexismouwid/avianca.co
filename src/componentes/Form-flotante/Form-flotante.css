@@ -7,7 +7,13 @@
   padding: 40px;
   background-image: url('/banner.png');
 }
+.title-mod {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 
+}
 .container {
   width: 90%;
   height: 19vh;
@@ -456,6 +462,18 @@ span{
 
 
 @media (max-width: 768px) {
+  .btn-close{
+    position: relative;
+    right: 20rem;
+    z-index: 1;
+    top: 10px;
+  }
+.title-mod {
+  font-size: 16px;
+  position: relative;
+  top: 0px;
+
+}
   .cajon-azul {
     height: auto;
   }
@@ -464,6 +482,9 @@ span{
   }
 
   .search-fields{
+    position: relative;
+    bottom: 0px;
+  
 height: 290px;
   }
  .date-picker-container2{
