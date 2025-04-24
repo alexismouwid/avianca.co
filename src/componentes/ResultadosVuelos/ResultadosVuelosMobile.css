@@ -1,0 +1,110 @@
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vuelo-card {
+        flex-direction: column;
+        padding: 1rem;
+        width: 200px;
+        position: relative;
+        right: -0.2rem;
+        height: 110px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background-color: red;
+
+    }
+
+    .lista-vuelos {
+     position: relative;
+     left: -5rem;
+        gap: 1rem;
+    }
+
+    .vuelo-hora {
+        align-items: center;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        width: 20%;
+        position: relative;
+        right: 5.7rem;
+        bottom: 0.4rem;
+
+    }
+
+    .hora {
+        font-size: 1rem;
+    }
+    
+
+    .vuelo-info {
+        position: relative;
+        right: 1rem;
+        bottom: 6rem;
+        align-items: center;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+       
+    }
+  .vuelo-hora-regreso {
+        align-items: center;
+        border-right: none;
+        border-bottom: 1px dashed #ccc;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        width: 20;
+        position: relative;
+        left: 6rem;
+        z-index: 1;
+        bottom: 12.7rem;
+        border: none;
+    } 
+.desde {
+    position: relative;
+    left: 8rem;
+    font-size: 0.6rem;
+    color: #999;
+    z-index: 1;
+    top: 10px;
+    border: none;
+}
+.costo {
+    position: relative;
+    left: 5rem;
+    z-index: 1;
+    border: none;
+    font-size: 1.7rem;
+}
+    .vuelo-precio {
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px dashed #ccc;
+        position: relative;
+        right: 3rem;
+        z-index: 1;
+        bottom: 15rem;
+        border: none;
+    }
+.moneda{
+    position: relative;
+    right: 0.2rem;
+    font-size: 0.8rem;
+    color: black;
+    border: none;
+    }
+
+
+    .btn-seleccionar {
+        width: auto;
+    }
+}
+
+
+
