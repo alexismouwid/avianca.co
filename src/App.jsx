@@ -36,17 +36,20 @@ const ocultarSearchFormFlotante = () => {
 };
 
   const handleSearchResults = async (results) => {
-    // Iniciar carga de búsqueda
-    setSearchLoading(true);
-    
-    // Simular tiempo de carga (2 segundos como la carga inicial)
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Actualizar estado con los resultados
-    setVuelos(results);
-    setShowResults(true);
-    setSearchLoading(false);
-  };
+   // 1. Cerrar el modal inmediatamente (acción visual rápida)
+  ocultarSearchFormFlotante(); 
+
+  // 2. Iniciar carga de búsqueda (opcional, si mantienes el loader)
+  setSearchLoading(true);
+  
+  // 3. Simular tiempo de carga (o llamada API real)
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  
+  // 4. Actualizar estados y mostrar resultados
+  setVuelos(results);
+  setShowResults(true);
+  setSearchLoading(false);  
+   };
 
   const handleClearResults = () => {
     setVuelos(null);
@@ -90,6 +93,7 @@ const ocultarSearchFormFlotante = () => {
       vuelos={vuelos}
       onSearchResults={handleSearchResults} 
       onClearSearch={handleClearResults}
+
     />
     <button className="close-btn" onClick={ocultarSearchFormFlotante}>X</button>
   </div>
