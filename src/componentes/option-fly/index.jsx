@@ -214,7 +214,7 @@ const response = await fetch('https://back-avianca.vercel.app/vuelos/buscar-vuel
         return (
             <div className="cajon-azul">
                 <div className='container'>
-                    <div className="flight-options">
+                    <div className="flight-optionsI">
                         <button
                             type="button"
                             className={`flight-button ${!isOneWay ? 'active' : ''}`}

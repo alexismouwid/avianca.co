@@ -18,7 +18,7 @@
   border-radius: 20px;
 }
 
-.flight-options {
+.flight-optionsI {
   background-color: #fff;
   display: inline-block;
   background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
@@ -541,16 +541,8 @@ height: 290px;
    left: 46px;
   }
 
-.flight-options {
-  background-color: #fff;
+.flight-optionsI {
   position: relative;
-  right: 10rem;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.5); /* Blanco con 70% de opacidad */
-  margin: 10px;
-  flex-direction: row;
-  border-radius: 25px;
-  justify-content: start;
-  color: #000;
+  left: 0rem;
 }
   }
