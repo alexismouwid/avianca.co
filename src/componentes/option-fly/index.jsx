@@ -94,7 +94,7 @@ class SearchForm extends Component {
             this.setState({ isLoading: true });
             
                     
-const response = await fetch('https://backend-avianca-co.vercel.app/vuelos/buscar-vuelos', {
+const response = await fetch('https://localhost:5000/vuelos/buscar-vuelos', {
     method: 'POST',
     headers: { 
         'Content-Type': 'application/json',
@@ -375,7 +375,7 @@ const response = await fetch('https://backend-avianca-co.vercel.app/vuelos/busca
                                     className='search-button'
                                     disabled={isLoading}
                                 >
-                                    {isLoading ? 'Buscando...' : 'Buscar'}
+                                  Buscar
                                 </button>
                             </div>
                         </form>

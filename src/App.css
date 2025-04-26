@@ -81,4 +81,10 @@ html{
   border-radius: 5px;
   cursor: pointer;
 }
- 
+ @media (max-width: 768px) {
+   .close-btn{
+     position: relative;
+     left: 10rem;
+     z-index: 1;
+   }
+ }
