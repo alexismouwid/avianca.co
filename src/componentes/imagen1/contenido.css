@@ -99,12 +99,40 @@ p {
     height: 200px;
   }
 
+.avi-logo{
+  position: relative;
+  left: 9rem;
+  top: 2rem;
+  margin: -30px 10px;
+  width: 100px;
+  height: 80px;
+}
+
 .titulo1 {
-  font-size: 20px;
+  position: relative;
+  left: -3rem;
+  top: 1rem;
+  font-size: 35px;
 }
-.titulo2{
-  font-size: 22px;
+.titulo-sub{
+  position: relative;
+  left: -4rem;
+  top: -1rem;
+  font-size: 40px;
 }
+.destinos{
+  position: relative;
+  left: -1.3rem;
+  top: -2rem;
+  font-size: 16px;
+}
+.cont-dest{
+  position: relative;
+  left: -5.8rem;
+  top: -3rem;
+  font-size: 16px;
+}
+
 p{
   font-size: 14px;
 }
@@ -113,12 +141,15 @@ p{
   border: none;
   position: relative;
   left: 5rem;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
   background-color: white;
   color: black;
   font-size: 14px;
   font-weight: bold;
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
 }
 .button-compraya:hover{
   background-color: black;
