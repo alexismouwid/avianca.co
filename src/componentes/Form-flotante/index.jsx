@@ -372,6 +372,15 @@ const response = await fetch('https://back-avianca.vercel.app/vuelos/buscar-vuel
                                     </div>
                                 )}
                             </div>
+                     <div className="field">
+                                <button 
+                                    type="submit" 
+                                    className='search-button'
+                                >
+                                  Buscar
+                                </button>
+                            </div>
+
 
                                                     </form>
                     </div>

@@ -71,7 +71,7 @@ html{
   margin-top: 10px;
   position: relative;
   bottom: 10rem;
-  left: 35rem;
+  left: 40rem;
   color: black;
   font-weight: bold; 
   font-size: 16px;
@@ -85,6 +85,7 @@ html{
    .close-btn{
      position: relative;
      left: 10rem;
+     bottom: 0rem;
      z-index: 1;
    }
  }
