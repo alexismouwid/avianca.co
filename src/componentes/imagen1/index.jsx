@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './contenido.css';
-import viajera from './mujer-viajera.png';
+import home from './home.jpg';
 
 class Contenido extends Component {
   render() {
@@ -9,16 +9,17 @@ class Contenido extends Component {
         <div className='contenido'>
           <div 
             className="imagen1-contenido"
-            style={{ backgroundImage: `url(${viajera})` }}
+            style={{ backgroundImage: `url(${home})` }}
           >
             {/* Contenido opcional dentro de la imagen */}
           </div>
           
           <div className="imagen2-contenido">
-            <h1 className="titulo1">Viaja en calma, vive en grande</h1>
-            <p>Reserva y vuela entre agosto y noviembre de 2024</p>
-            <p>Por trayecto desde</p>
-            <h1 className="titulo2">COP 124.300</h1>
+            <img  className="avi-logo" src='./avi-logo.png' width="100" height="100" /> 
+            <h1 className="titulo1">¡Más de 80 destinos</h1>
+            <h1 className="titulo-sub">esperan por ti!</h1>
+            <p className='destinos'>Medellín, Cali, Fort Lauderdale, Sao Paulo, Buenos Aires y</p>
+            <p className='cont-dest'>muchos lugares mas por recorrer</p>
             <button className="button-compraya">Compra ya</button>
           </div>
         </div>

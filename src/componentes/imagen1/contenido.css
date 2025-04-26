@@ -28,8 +28,38 @@
   width: 50%; /* Valor por defecto para pantallas grandes */
 }
 
+.avi-logo{
+  position: relative;
+  left: 13rem;
+  top: 4rem;
+  margin: -30px 10px;
+  width: 100px;
+  height: 80px;
+}
+
 .titulo1, .titulo2 {
-  font-size: 24px;
+  position: relative;
+  left: -6rem;
+  top: 1rem;
+  font-size: 35px;
+}
+.titulo-sub{
+  position: relative;
+  left: -7.7rem;
+  top: -1rem;
+  font-size: 40px;
+}
+.destinos{
+  position: relative;
+  left: -2.5rem;
+  top: -2rem;
+  font-size: 17px;
+}
+.cont-dest{
+  position: relative;
+  left: -8.9rem;
+  top: -3rem;
+  font-size: 16px;
 }
 
 p {
@@ -37,16 +67,23 @@ p {
 }
 
 .button-compraya {
-  
+   position: relative;
+   left: 9.5rem;
+   top: -4rem;
+   padding: 10px 15px;
   margin: 10px 0;
   color: black;
+  border: none;
+  font-weight: 550;
   background-color: white;
-  border: 1px solid rgba(0,0,0,0.9);
    font-size: 15px;
   border-radius: 20px;
 }
 
 .button-compraya:hover {
+  background-color: gray;
+  color: white;
+  border: none;
 
   }
 @media (max-width: 768px) {
