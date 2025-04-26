@@ -94,7 +94,7 @@ class SearchForm extends Component {
             this.setState({ isLoading: true });
             
                     
-const response = await fetch('https://backend-avianca-co.vercel.app/vuelos/buscar-vuelos', {
+const response = await fetch('https://back-avianca.vercel.app/vuelos/buscar-vuelos', {
     method: 'POST',
     headers: { 
         'Content-Type': 'application/json',
