@@ -25,7 +25,13 @@
 }
 
 .route-details span{
-  font-size: 14px;
+  font-size: 16px;
+  gap: 2rem;
+  color: black;
+}
+
+.dates{
+  font-size: 20px;
   color: black;
 }
 
@@ -75,7 +81,7 @@
   align-items: center;
   gap: 10px;
   position: relative;
-  right: -6rem;
+  right: -2rem;
 }
 
 .step-info {

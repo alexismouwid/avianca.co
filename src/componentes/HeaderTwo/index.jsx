@@ -8,7 +8,6 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
@@ -22,10 +21,16 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
     adults: 1,
   };
 
-  const vuelo =
+  const vueloIda =
     vuelos?.ida?.directos?.[0] ||
     vuelos?.ida?.conEscala?.[0] ||
     defaultVuelo;
+    
+  const vueloRegreso = 
+    vuelos?.regreso?.directos?.[0] || 
+    vuelos?.regreso?.conEscala?.[0];
+    
+  const tieneVueloRegreso = !!vueloRegreso;
 
   const step = 1;
   const totalSteps = 5;
@@ -38,37 +43,47 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
+      timeZone: "UTC",
     });
   };
 
-  const adultos = vuelo.adults || 1;
-
+  const adultos = vueloIda.adults || 1;
+console.log(vueloIda.fechaIda)
   return (
     <nav className="headertwo">
       <div className="left-section">
-       
-          <img
-            src="/nombre-logo.png"
-            alt="Avianca"
-            className="avianca-logo"
-            width="120px"
-          />
-       
-
+        <img
+          src="/nombre-logo.png"
+          alt="Avianca"
+          className="avianca-logo"
+          width="120px"
+        />
+        
         <div className="route-info">
           <div className="cities">
-            {vuelo.origen} a {vuelo.destino}
-          </div>
+            {vueloIda.origen} a {vueloIda.destino}
+                     </div>
           <div className="route-details">
-            <span>
+            <span className="dates">
               <img
                 src="./origen.png"
                 alt="plane icon"
                 className="icon-plane"
                 width={20}
               />
-              {formatDate(vuelo.fechaIda || vuelo.fecha)}
-            </span>
+              {formatDate(vueloIda.fechaIda || vueloIda.fecha)}
+             
+               {tieneVueloRegreso && (
+    <span>
+      <img
+        src="./regreso.png"
+        alt="plane icon return"
+        className="icon-plane"
+        width={20}
+      />
+      {formatDate(vueloRegreso.fechaIda || vueloRegreso.fecha)}
+    </span>
+  )}           </span>
             <span>
               <img
                 className="icon-pasajero"
@@ -81,12 +96,11 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
               {adultos} {adultos === 1 ? "Adulto" : "Adultos"}
             </span>
             <a className="modify-search" onClick={onMostrarSearch} href="#">
-              {isMobile ?  <img src="./modificar.png" alt="lupa" width={50}/>  :'Modificar'}
+              {isMobile ? <img src="./modificar.png" alt="lupa" width={50}/> : 'Modificar busqueda'}
             </a>
           </div>
         </div>
       </div>
-
       {!isMobile && (
         <div className="right-section">
           <div className="step-info">
@@ -100,7 +114,6 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
           </div>
         </div>
       )}
-
       {!isMobile && (
         <button className="cart">
           <span className="cart-icon">
@@ -114,4 +127,3 @@ const HeaderTwo = ({ vuelos, onMostrarSearch }) => {
 };
 
 export default HeaderTwo;
-

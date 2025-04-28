@@ -1,6 +1,7 @@
 import Afterheader from './componentes/afterheader';
 import Header from './componentes/header';
 import SearchForm from './componentes/option-fly';
+import DateSelector from './componentes/DateSelector';
 import ResultadosVuelos from './componentes/ResultadosVuelos';
 import Contenido from './componentes/imagen1';
 import Ofertas from './componentes/Ofertas';
@@ -108,8 +109,13 @@ const ocultarSearchFormFlotante = () => {
         
         {/* Mostrar resultados o contenido normal */}
         {showResults ? (
-          <ResultadosVuelos vuelos={vuelos} />
-        ) : (
+<>  {/* Fragmento agregado */}
+    <DateSelector 
+      vuelos={vuelos} 
+      onSearchResults={handleSearchResults} />
+    <ResultadosVuelos vuelos={vuelos} />
+  </>
+                  ) : (
           <>
             <Contenido />
             <Ofertas />

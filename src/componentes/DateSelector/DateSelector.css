@@ -1,0 +1,184 @@
+/* DateSelector.css */
+
+.flight-date-selector {
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+.titles-container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    position: relative;
+    left: 2.5rem;
+}
+.title-logo-origin{
+    margin-top: 10px;
+}
+.ida-ant {
+    font-size: 18px;
+    margin-bottom: 5;
+    color: #222;
+}
+
+.route-title {
+    margin-left: 0.5rem;
+    font-size: 18px;
+    color: #222;
+}
+
+.dates-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    flex-wrap: nowrap; /* Evita que se rompa el layout en pantallas pequeñas */
+}
+
+.date-cell {
+    color: black;
+    min-width: 120px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+      transition: all 0.3s ease; 
+
+}
+
+.date-cell:hover {
+    color: #25a244;
+}
+
+/* Estilo para la fecha seleccionada - con borde y texto verde */
+.selected-date {
+    border: 2px solid green;
+    background-color: rgba(37, 162, 68, 0.05);
+color: green;
+    font-weight: 600;
+    background-color: #eaffea;
+}
+
+.selected-date .day-date,
+.selected-date .price,  {
+    color: #25a244;
+    font-weight: 600;
+}
+
+.day-date {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 15px;
+}
+
+.loading-indicator {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+    color: #666;
+}
+
+.filters-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Asegura que los filtros se acomoden bien en pantallas pequeñas */
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.filter-button {
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: #f5f5f5;
+}
+
+.filter-button.active {
+    background-color: #f0f7ff;
+    border-color: #8bc5ff;
+    color: #0066cc;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .route-title {
+        font-size: 18px; /* Tamaño de fuente más pequeño en pantallas medianas */
+    }
+
+    .dates-container {
+        flex-direction: row; /* Los elementos de fecha se apilan en pantallas más pequeñas */
+        align-items: center; /* Centrar las fechas */
+    }
+
+    .date-cell {
+        min-width: 20%; /* Las celdas ocupan el 100% del ancho */
+        height: auto;
+        padding: 10px;
+        font-size: 14px; /* Ajustar el tamaño de fuente */
+    }
+
+    .day-date {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .filters-container {
+        display: flex;
+        flex-direction: row;
+        gap: 5px; /* Menos espacio entre los filtros en pantallas pequeñas */   
+        justify-content: center; /* Centrar los filtros */
+    }
+
+    .filter-button {
+        padding: 6px 10px;
+        font-size: 12px; /* Reducción en el tamaño de fuente para los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .route-title {
+        font-size: 16px; /* Tamaño de fuente más pequeño en pantallas móviles */
+    }
+
+    .dates-container {
+        gap: 20px; /* Mayor espacio entre las fechas en pantallas muy pequeñas */
+    }
+
+    .date-cell {
+        font-size: 12px; /* Ajuste del tamaño de la fuente */
+        padding: 8px;
+    }
+
+    .filters-container {
+        flex-direction: column; /* Los filtros se apilan verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .filter-button {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
+

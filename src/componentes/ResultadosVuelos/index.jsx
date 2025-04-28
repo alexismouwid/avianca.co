@@ -3,7 +3,7 @@ import './ResultadosVuelos.css';
 
 const ResultadosVuelos = ({ vuelos }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+console.log(vuelos)
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
